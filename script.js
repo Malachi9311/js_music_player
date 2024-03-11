@@ -15,6 +15,19 @@ const playPause = () => {
     }else{
         song.play();
         cntlIcon.classList.add("fa-pause");
-        cntlIcon.classList.remove("fa-play");
+        cntlIcon.classList.remove("fa-play");    
     }
 }
+
+if (song.play()) {
+    setInterval(()=>{
+        progress.value = song.currentTime
+    }, 500)
+}
+
+progress.onchange = function(){
+    song.play();
+    song.currentTime = progress.value;
+    cntlIcon.classList.add("fa-pause");
+    cntlIcon.classList.remove("fa-play");
+} 
