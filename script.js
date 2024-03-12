@@ -1,4 +1,5 @@
 let progress = document.getElementById('progress');
+console.log(progress)
 let song = document.getElementById('song');
 let cntlIcon = document.getElementById('cntlIcon');
 
